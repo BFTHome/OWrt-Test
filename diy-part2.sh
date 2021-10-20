@@ -8,10 +8,10 @@ sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generat
 sed -i 's/OpenWrt/DIR-823/g' package/base-files/files/bin/config_generate
 
 # Modify the version number
-sed -i "s/OpenWrt /DIR-823 build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/lean/default-settings/files/zzz-default-settings
+#sed -i "s/OpenWrt /DIR-823 build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/lean/default-settings/files/zzz-default-settings
 
 # Modify default theme
-sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
+#sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 
 # Add kernel build user
 [ -z $(grep "CONFIG_KERNEL_BUILD_USER=" .config) ] &&
