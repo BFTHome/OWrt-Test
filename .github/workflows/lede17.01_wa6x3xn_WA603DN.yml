@@ -13,8 +13,9 @@ env:
   REPO_BRANCH: openwrt-18.06
   FEEDS_CONF: feeds.conf.default
   #CONFIG_FILE: configs/test0.config
-  #CONFIG_FILE: configs/OpenWRT_WR1043ND_20211016.config
-  CONFIG_FILE: configs/OpenWRT_WR1043ND_20211018.config
+  CONFIG_FILE: configs/OpenWRT_WR1043ND_20211016.config
+  #CONFIG_FILE: configs/OpenWRT_WR1043ND_20211017.config
+  #CONFIG_FILE: configs/OpenWRT_WR1043ND_20211018.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   UPLOAD_BIN_DIR: true
@@ -97,8 +98,8 @@ jobs:
       #if: steps.organize.outputs.status == 'success' && env.UPLOAD_WETRANSFER == 'true' && !cancelled()
       run: |
         curl -fsSL git.io/file-transfer | sh
-        cp openwrt/.config openwrt/OpenWRT_WA603DN_16M_USB_DLNA_SS_SSR_20211016.config  
-        ./transfer wet -s -p 16 --no-progress openwrt/OpenWRT_WA603DN_16M_USB_DLNA_SS_SSR_20211016.config 2>&1 | tee wetransfer.log
+        cp openwrt/.config openwrt/OpenWRT_WR1043ND_20211017.config
+        ./transfer wet -s -p 16 --no-progress openwrt/OpenWRT_WR1043ND_20211017.config 2>&1 | tee wetransfer.log
         echo "::warning  🌏 file=wetransfer.com::$(cat wetransfer.log | grep https)"
         echo "::set-output name=url::$(cat wetransfer.log | grep https | cut -f3 -d" ")"
 
