@@ -11,8 +11,8 @@ env:
   REPO_URL: https://github.com/openwrt/openwrt
   REPO_BRANCH: lede-17.01
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: configs/test0.config
-  #CONFIG_FILE: configs/OpenWRT_WA603DN_16M_USB_DLNA_SS_SSR_20211016.config
+  #CONFIG_FILE: configs/test0.config
+  CONFIG_FILE: configs/OpenWRT_WR1043ND_20211016.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   UPLOAD_BIN_DIR: true
