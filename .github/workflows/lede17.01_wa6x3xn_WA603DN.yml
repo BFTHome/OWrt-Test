@@ -9,7 +9,8 @@ env:
   #REPO_URL: https://github.com/coolsnowwolf/lede
   #REPO_BRANCH: master
   REPO_URL: https://github.com/openwrt/openwrt
-  REPO_BRANCH: lede-17.01
+  #REPO_BRANCH: lede-17.01
+  REPO_BRANCH: openwrt-18.06
   FEEDS_CONF: feeds.conf.default
   #CONFIG_FILE: configs/test0.config
   CONFIG_FILE: configs/OpenWRT_WR1043ND_20211016.config
